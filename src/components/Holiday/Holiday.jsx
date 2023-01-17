@@ -6,18 +6,18 @@ const Holiday = (props) => {
     
 
     return(
-        <div>
-            <h2>{holiday.id}</h2>
+        <div className="holiday">
+            <h2 className="holiday__location">{holiday.location}</h2>
             
-            {images.map(imageURL => (<img className="holidayImage" src={imageURL}/>)
+            {images.map(imageURL => (<img className="holiday__image" src={imageURL}/>)
             )}
           
-            <div >{holiday.location}</div>
-            <div >{holiday.date}</div>
+            
+            <div className="holiday__date" >{holiday.date}</div>
      
-            <div>{holiday.description}</div>
+            <div className="holiday__description">{holiday.description}</div>
            
-            <div>{holiday.author}</div>
+            <div className="holiday__author">{holiday.author}</div>
         </div>
     );
 };
