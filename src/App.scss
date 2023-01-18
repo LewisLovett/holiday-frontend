@@ -1,0 +1,6 @@
+@use "./styles/variables" as *;
+
+body{
+  background-color: $color-primary;
+  color: $color-secondary;
+}
