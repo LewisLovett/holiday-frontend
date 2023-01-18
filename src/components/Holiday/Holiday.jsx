@@ -8,9 +8,9 @@ const Holiday = (props) => {
     return(
         <div className="holiday">
             <h2 className="holiday__location">{holiday.location}</h2>
-            
+            <div className="holiday__images">
             {images.map(imageURL => (<img className="holiday__image" src={imageURL}/>)
-            )}
+            )}</div>
           
             
             <div className="holiday__date" >{holiday.date}</div>

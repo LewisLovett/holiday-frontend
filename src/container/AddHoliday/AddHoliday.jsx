@@ -1,3 +1,4 @@
+import "./AddHoliday.scss";
 
 import { useEffect, useState } from "react";
 
@@ -20,6 +21,7 @@ const AddHoliday = (props) => {
         });
         if (response.ok) {
             alert("Holiday added");
+        
           } else {
             const message = await response.text();
             alert(message);
@@ -29,13 +31,14 @@ const AddHoliday = (props) => {
     return(
         <>
             <form className="holiday-form" onSubmit={addHoliday} id="holidayForm">
-                <input className="holiday-form__location" placeholder="Holiday Location" type="text"
+                <h2>Add Holiday</h2>
+                <input className="holiday-form__input" placeholder="Holiday Location" type="text"
                     onInput={event=>setHoliday({...holiday,location:event.target.value})}  />
-                <input className="holiday-form__date" placeholder="Holiday Date" type="text"
+                <input className="holiday-form__input" placeholder="Holiday Date" type="text"
                     onInput={event=>setHoliday({...holiday,date:event.target.value})}  />
-                <input className="holiday-form__author" placeholder="Holiday Author" type="text"
+                <input className="holiday-form__input" placeholder="Holiday Author" type="text"
                     onInput={event=>setHoliday({...holiday,author:event.target.value})}  />
-                <textarea className="holiday-form__description" placeholder="Holiday Description"
+                <textarea className="holiday-form__input" placeholder="Holiday Description"
                     onInput={event=>setHoliday({...holiday,description:event.target.value})} form="holidayForm"  ></textarea>
                 <button className="holiday-form__submit" type="submit">Submit</button>
             </form>

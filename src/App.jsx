@@ -53,8 +53,8 @@ function App() {
   return (
 
     <div >
-          <HolidayList holidays ={holidays} images={images}/>
-          <AddHoliday />
+          <HolidayList holidays ={holidays} images={images} />
+          <AddHoliday/>
           <AddImage holidays ={holidays}/>
         </div>
 

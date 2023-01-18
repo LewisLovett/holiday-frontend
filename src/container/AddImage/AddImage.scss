@@ -1,0 +1,11 @@
+.image-form{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__input{
+        margin: 0.5em;
+        width: 25em;
+    }
+}

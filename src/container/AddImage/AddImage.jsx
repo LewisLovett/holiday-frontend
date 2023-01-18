@@ -1,3 +1,4 @@
+import "./AddImage.scss";
 
 import { useEffect, useState } from "react";
 import Holiday from "../../components/Holiday/Holiday";
@@ -24,6 +25,7 @@ const AddImage = (props) => {
         });
         if (response.ok) {
             alert("Image added");
+        
           } else {
             const message = await response.text();
             alert(message);
@@ -34,11 +36,13 @@ const AddImage = (props) => {
 
     return(
         <>
-            <form className="iamge-form" onSubmit={addImage} id="imageForm">
-                <input className="image-form__url" placeholder="Image URL" type="text"
+       
+            <form className="image-form" onSubmit={addImage} id="imageForm">
+            <h2>Add Image</h2>
+                <input className="image-form__input" placeholder="Image URL" type="text"
                     onInput={event=>setImage({...image,url:event.target.value})}  />
 
-                <select name="holidays" id="holidays" onChange={event=>setHolidayId(event.target.value)}>
+                <select className="image-form__input" name="holidays" id="holidays" onChange={event=>setHolidayId(event.target.value)}>
                     {holidays && holidays.map((holiday)=> (<option value={holiday.id}>{holiday.location}</option>))}
                 </select>
 
