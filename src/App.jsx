@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import HolidayList from './container/HolidayList/HolidayList';
 import AddHoliday from './container/AddHoliday/AddHoliday';
 import AddImage from './container/AddImage/AddImage';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
 
@@ -52,11 +53,14 @@ function App() {
 
   return (
 
-    <div >
-          <HolidayList holidays ={holidays} images={images} />
-          <AddHoliday/>
-          <AddImage holidays ={holidays}/>
-        </div>
+        <Router>
+                  <Routes>
+            <Route path='/' element={<HolidayList holidays ={holidays} images={images} />}/>
+            <Route path='/addHoliday' element={  <AddHoliday/>}/>
+            <Route path='/addImage' element={   <AddImage holidays ={holidays}/>}/>
+        
+        </Routes>
+        </Router>
 
   );
 }

@@ -1,0 +1,13 @@
+@use "../../styles/variables" as *;
+
+.nav-button{
+    padding: 1em;
+    background-color: $color-tertiary;
+    color: $color-primary;
+    margin: 1em;
+}
+
+.link-container{
+    display: flex;
+    justify-content: center;
+}

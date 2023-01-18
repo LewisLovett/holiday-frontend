@@ -1,3 +1,5 @@
+@use "../../styles/variables" as *;
+
 .image-form{
 
     display: flex;
@@ -8,4 +10,11 @@
         margin: 0.5em;
         width: 25em;
     }
+}
+
+.nav-button{
+    padding: 1em;
+    background-color: $color-tertiary;
+    color: $color-primary;
+    margin: 1em;
 }

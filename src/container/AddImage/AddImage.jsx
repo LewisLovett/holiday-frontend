@@ -2,7 +2,7 @@ import "./AddImage.scss";
 
 import { useEffect, useState } from "react";
 import Holiday from "../../components/Holiday/Holiday";
-
+import {Link} from "react-router-dom"
 
 const AddImage = (props) => {
     const {holidays} = props;
@@ -36,8 +36,9 @@ const AddImage = (props) => {
 
     return(
         <>
-       
+    
             <form className="image-form" onSubmit={addImage} id="imageForm">
+            <Link className="nav-button"  to={"/"}>View Holidays</Link>
             <h2>Add Image</h2>
                 <input className="image-form__input" placeholder="Image URL" type="text"
                     onInput={event=>setImage({...image,url:event.target.value})}  />

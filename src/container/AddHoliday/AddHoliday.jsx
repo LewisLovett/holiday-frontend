@@ -1,7 +1,7 @@
 import "./AddHoliday.scss";
 
 import { useEffect, useState } from "react";
-
+import {Link} from "react-router-dom"
 
 const AddHoliday = (props) => {
     const [holiday,setHoliday] = useState({
@@ -30,7 +30,9 @@ const AddHoliday = (props) => {
 
     return(
         <>
+        
             <form className="holiday-form" onSubmit={addHoliday} id="holidayForm">
+            <Link className="nav-button"  to={"/"}>View Holidays</Link>
                 <h2>Add Holiday</h2>
                 <input className="holiday-form__input" placeholder="Holiday Location" type="text"
                     onInput={event=>setHoliday({...holiday,location:event.target.value})}  />
